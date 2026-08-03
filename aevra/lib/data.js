@@ -154,6 +154,45 @@ export const industries = [
   },
 ];
 
+export const aiUseCases = [
+  {
+    slug: "automate",
+    title: "Automate with AI",
+    desc: "Document processing, intelligent workflows, and AI agents that handle complex multi-step tasks without human intervention.",
+    tags: ["Agentic AI", "Workflow Automation", "LLM Integration"],
+  },
+  {
+    slug: "data-decisions",
+    title: "Turn Raw Data Into Decisions",
+    desc: "Reliable data pipelines, modern architecture, and BI dashboards that teams actually use to make faster calls.",
+    tags: ["Data Engineering", "BI & Analytics", "Forecasting"],
+  },
+  {
+    slug: "know-customers",
+    title: "Know Your Customers",
+    desc: "NLP, sentiment analysis, and customer segmentation that extract insight from every interaction you have.",
+    tags: ["NLP", "Sentiment Analysis", "Personalization"],
+  },
+  {
+    slug: "predict-forecast",
+    title: "Predict & Forecast",
+    desc: "Demand forecasting, churn prediction, fraud detection, and pricing optimization built on your historical data.",
+    tags: ["Predictive Analytics", "ML Models", "Time Series"],
+  },
+  {
+    slug: "build-product",
+    title: "Build an AI-Powered Product",
+    desc: "End-to-end AI product development — from architecture design to MLOps, evaluation, and production deployment.",
+    tags: ["AI Product Dev", "MLOps", "Cloud"],
+  },
+  {
+    slug: "computer-vision",
+    title: "See What the Human Eye Misses",
+    desc: "Computer vision for quality control, object detection, document OCR, and real-time video analytics at scale.",
+    tags: ["Computer Vision", "OCR", "Image Recognition"],
+  },
+];
+
 export const process = [
   { step: "01", title: "Discover", desc: "We study your business, systems, and goals to understand where technology can create the most value." },
   { step: "02", title: "Strategize", desc: "We define a clear roadmap — priorities, architecture, and ROI — before a single line of code is written." },

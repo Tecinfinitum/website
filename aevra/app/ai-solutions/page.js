@@ -3,6 +3,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import ServiceCard from "@/components/sections/ServiceCard";
+import AIExplorer from "@/components/sections/AIExplorer";
 import TrustPillars from "@/components/sections/TrustPillars";
 import TechStack from "@/components/sections/TechStack";
 import CTABanner from "@/components/sections/CTABanner";
@@ -24,6 +25,8 @@ export default function AiSolutionsPage() {
         title="AI that moves your business, not just a demo"
         desc="We design, build, and operate production AI — agents, copilots, and decision-support systems trained on your data and accountable to your outcomes."
       />
+
+      <AIExplorer />
 
       <section className="relative pb-24" aria-labelledby="ai-services-heading">
         <Container>
