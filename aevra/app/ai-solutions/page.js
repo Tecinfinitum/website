@@ -1,6 +1,7 @@
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
 import ServiceCard from "@/components/sections/ServiceCard";
 import TrustPillars from "@/components/sections/TrustPillars";
 import TechStack from "@/components/sections/TechStack";
@@ -30,8 +31,10 @@ export default function AiSolutionsPage() {
             AI Services
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {aiServices.map((s) => (
-              <ServiceCard key={s.slug} service={s} />
+            {aiServices.map((s, i) => (
+              <Reveal key={s.slug} delay={(i % 2) * 100}>
+                <ServiceCard service={s} />
+              </Reveal>
             ))}
           </div>
         </Container>
@@ -49,11 +52,13 @@ export default function AiSolutionsPage() {
               { title: "Transparent", desc: "Every output is explainable and traceable back to source data or logic." },
               { title: "Evaluated", desc: "Models are tested against real scenarios before and after deployment." },
               { title: "Overseen", desc: "Human-in-the-loop review for decisions that carry real business risk." },
-            ].map((v) => (
-              <div key={v.title} className="glass rounded-2xl p-7">
-                <h3 className="text-lg font-semibold text-white">{v.title}</h3>
-                <p className="mt-2 text-white/60 text-sm leading-relaxed">{v.desc}</p>
-              </div>
+            ].map((v, i) => (
+              <Reveal key={v.title} delay={i * 100}>
+                <div className="glass rounded-2xl p-7 h-full">
+                  <h3 className="text-lg font-semibold text-white">{v.title}</h3>
+                  <p className="mt-2 text-white/60 text-sm leading-relaxed">{v.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Container>

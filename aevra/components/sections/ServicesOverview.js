@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Reveal from "../ui/Reveal";
 import { services } from "@/lib/data";
 
 export default function ServicesOverview() {
@@ -22,12 +23,14 @@ export default function ServicesOverview() {
         </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s) => (
-            <article key={s.slug} className="group glass rounded-2xl p-6 hover:border-electric/40 transition">
-              <span className="text-xs font-medium uppercase tracking-wider text-electric-light">{s.category}</span>
-              <h3 className="mt-2 text-base font-semibold text-white leading-snug">{s.title}</h3>
-              <p className="mt-2 text-sm text-white/55 leading-relaxed">{s.short}</p>
-            </article>
+          {services.map((s, i) => (
+            <Reveal key={s.slug} delay={(i % 4) * 80}>
+              <article className="group glass rounded-2xl p-6 h-full hover:border-electric/40 hover:-translate-y-1 transition">
+                <span className="text-xs font-medium uppercase tracking-wider text-electric-light">{s.category}</span>
+                <h3 className="mt-2 text-base font-semibold text-white leading-snug">{s.title}</h3>
+                <p className="mt-2 text-sm text-white/55 leading-relaxed">{s.short}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </Container>

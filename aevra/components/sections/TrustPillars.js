@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Reveal from "../ui/Reveal";
 import { trustPillars } from "@/lib/data";
 
 export default function TrustPillars() {
@@ -16,14 +17,16 @@ export default function TrustPillars() {
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {trustPillars.map((t) => (
-            <div key={t.title} className="glass rounded-2xl p-7">
-              <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-electric to-brand flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">
-                ✓
+          {trustPillars.map((t, i) => (
+            <Reveal key={t.title} delay={(i % 3) * 90}>
+              <div className="glass rounded-2xl p-7 h-full">
+                <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-electric to-brand flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">
+                  ✓
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-white">{t.title}</h3>
+                <p className="mt-2 text-white/60 text-sm leading-relaxed">{t.desc}</p>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-white">{t.title}</h3>
-              <p className="mt-2 text-white/60 text-sm leading-relaxed">{t.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

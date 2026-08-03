@@ -37,10 +37,20 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        pulseSoft: {
+          "0%, 100%": { opacity: "0.35", transform: "scale(1)" },
+          "50%": { opacity: "0.9", transform: "scale(1.25)" },
+        },
+        dash: {
+          "0%": { strokeDashoffset: "24" },
+          "100%": { strokeDashoffset: "0" },
+        },
       },
       animation: {
         float: "float 7s ease-in-out infinite",
         fadeUp: "fadeUp 0.7s ease-out both",
+        pulseSoft: "pulseSoft 3.2s ease-in-out infinite",
+        dash: "dash 20s linear infinite",
       },
     },
   },

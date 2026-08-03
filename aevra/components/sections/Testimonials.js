@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import Reveal from "../ui/Reveal";
 import { testimonials } from "@/lib/data";
 
 export default function Testimonials({ limit }) {
@@ -12,15 +13,17 @@ export default function Testimonials({ limit }) {
         </h2>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {items.map((t) => (
-            <figure key={t.name} className="glass rounded-2xl p-8">
-              <blockquote className="text-lg md:text-xl font-medium leading-snug text-white">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-6 text-sm text-white/60">
-                <span className="font-semibold text-white">{t.name}</span> · {t.role}
-              </figcaption>
-            </figure>
+          {items.map((t, i) => (
+            <Reveal key={t.name} delay={(i % 2) * 100}>
+              <figure className="glass rounded-2xl p-8 h-full">
+                <blockquote className="text-lg md:text-xl font-medium leading-snug text-white">
+                  &ldquo;{t.quote}&rdquo;
+                </blockquote>
+                <figcaption className="mt-6 text-sm text-white/60">
+                  <span className="font-semibold text-white">{t.name}</span> · {t.role}
+                </figcaption>
+              </figure>
+            </Reveal>
           ))}
         </div>
       </Container>

@@ -1,4 +1,6 @@
 import Container from "../ui/Container";
+import Reveal from "../ui/Reveal";
+import Counter from "../ui/Counter";
 import { trustedBy, metrics } from "@/lib/data";
 
 export default function TrustedBy() {
@@ -9,24 +11,30 @@ export default function TrustedBy() {
           Trusted by teams building the future
         </p>
 
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-          {trustedBy.map((c) => (
-            <div
-              key={c}
-              className="flex items-center justify-center bg-ink/60 py-8 px-4 text-center text-base font-semibold text-white/40 hover:text-white transition"
-            >
-              {c}
-            </div>
-          ))}
-        </div>
+        <Reveal>
+          <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            {trustedBy.map((c) => (
+              <div
+                key={c}
+                className="flex items-center justify-center bg-ink/60 py-8 px-4 text-center text-base font-semibold text-white/40 hover:text-white transition"
+              >
+                {c}
+              </div>
+            ))}
+          </div>
+        </Reveal>
 
         <dl className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {metrics.map((m) => (
-            <div key={m.label} className="text-center">
-              <dt className="sr-only">{m.label}</dt>
-              <dd className="text-3xl md:text-4xl font-semibold gradient-text">{m.value}</dd>
-              <p className="mt-2 text-sm text-white/55">{m.label}</p>
-            </div>
+          {metrics.map((m, i) => (
+            <Reveal key={m.label} delay={i * 80}>
+              <div className="text-center">
+                <dt className="sr-only">{m.label}</dt>
+                <dd className="text-3xl md:text-4xl font-semibold gradient-text">
+                  <Counter value={m.value} />
+                </dd>
+                <p className="mt-2 text-sm text-white/55">{m.label}</p>
+              </div>
+            </Reveal>
           ))}
         </dl>
       </Container>

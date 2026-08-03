@@ -1,5 +1,6 @@
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
 import ServiceCard from "@/components/sections/ServiceCard";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
@@ -26,8 +27,10 @@ export default function ServicesPage() {
             All Services
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {services.map((s) => (
-              <ServiceCard key={s.slug} service={s} />
+            {services.map((s, i) => (
+              <Reveal key={s.slug} delay={(i % 2) * 100}>
+                <ServiceCard service={s} />
+              </Reveal>
             ))}
           </div>
         </Container>

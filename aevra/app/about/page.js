@@ -1,6 +1,7 @@
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Reveal from "@/components/ui/Reveal";
 import TrustedBy from "@/components/sections/TrustedBy";
 import TrustPillars from "@/components/sections/TrustPillars";
 import CTABanner from "@/components/sections/CTABanner";
@@ -72,11 +73,13 @@ export default function AboutPage() {
         <Container>
           <SectionHeading eyebrow="What we believe" title="The principles behind every engagement" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {values.map((v) => (
-              <div key={v.title} className="glass rounded-2xl p-7">
-                <h3 className="text-lg font-semibold text-white">{v.title}</h3>
-                <p className="mt-2 text-white/60 text-sm leading-relaxed">{v.desc}</p>
-              </div>
+            {values.map((v, i) => (
+              <Reveal key={v.title} delay={(i % 2) * 100}>
+                <div className="glass rounded-2xl p-7 h-full">
+                  <h3 className="text-lg font-semibold text-white">{v.title}</h3>
+                  <p className="mt-2 text-white/60 text-sm leading-relaxed">{v.desc}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Container>
@@ -86,13 +89,15 @@ export default function AboutPage() {
         <Container>
           <SectionHeading eyebrow="Leadership" title="The team setting the bar" />
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            {leadership.map((p) => (
-              <div key={p.name} className="glass rounded-2xl p-7">
-                <div className="h-12 w-12 rounded-full bg-gradient-to-br from-electric to-brand" aria-hidden="true" />
-                <h3 className="mt-4 text-lg font-semibold text-white">{p.name}</h3>
-                <p className="text-sm text-electric-light">{p.role}</p>
-                <p className="mt-2 text-white/60 text-sm leading-relaxed">{p.bio}</p>
-              </div>
+            {leadership.map((p, i) => (
+              <Reveal key={p.name} delay={(i % 3) * 100}>
+                <div className="glass rounded-2xl p-7 h-full">
+                  <div className="h-12 w-12 rounded-full bg-gradient-to-br from-electric to-brand" aria-hidden="true" />
+                  <h3 className="mt-4 text-lg font-semibold text-white">{p.name}</h3>
+                  <p className="text-sm text-electric-light">{p.role}</p>
+                  <p className="mt-2 text-white/60 text-sm leading-relaxed">{p.bio}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </Container>

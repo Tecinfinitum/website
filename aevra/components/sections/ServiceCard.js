@@ -1,6 +1,6 @@
 export default function ServiceCard({ service }) {
   return (
-    <article className="group glass rounded-2xl p-8 hover:border-electric/40 transition">
+    <article className="group glass rounded-2xl p-8 h-full hover:border-electric/40 hover:-translate-y-1 transition">
       <div className="flex items-start justify-between gap-4">
         <div>
           <span className="text-xs font-medium uppercase tracking-wider text-electric-light">{service.category}</span>

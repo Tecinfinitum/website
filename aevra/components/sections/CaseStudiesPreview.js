@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Reveal from "../ui/Reveal";
 import CaseStudyCard from "./CaseStudyCard";
 import { caseStudies } from "@/lib/data";
 
@@ -21,8 +22,10 @@ export default function CaseStudiesPreview() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {items.map((c) => (
-            <CaseStudyCard key={c.slug} study={c} />
+          {items.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 100}>
+              <CaseStudyCard study={c} />
+            </Reveal>
           ))}
         </div>
       </Container>

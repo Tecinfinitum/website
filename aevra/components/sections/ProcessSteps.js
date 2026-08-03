@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
+import Reveal from "../ui/Reveal";
 import { process } from "@/lib/data";
 
 export default function ProcessSteps() {
@@ -16,11 +17,15 @@ export default function ProcessSteps() {
         />
 
         <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {process.map((p) => (
-            <li key={p.step} className="glass rounded-2xl p-7 hover:border-electric/40 transition">
-              <span className="text-sm font-mono text-white/35">{p.step}</span>
-              <h3 className="mt-3 text-xl font-semibold text-white">{p.title}</h3>
-              <p className="mt-2 text-white/60 text-sm leading-relaxed">{p.desc}</p>
+          {process.map((p, i) => (
+            <li key={p.step}>
+              <Reveal delay={(i % 3) * 100}>
+                <div className="glass rounded-2xl p-7 h-full hover:border-electric/40 transition">
+                  <span className="text-sm font-mono text-white/35">{p.step}</span>
+                  <h3 className="mt-3 text-xl font-semibold text-white">{p.title}</h3>
+                  <p className="mt-2 text-white/60 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </Reveal>
             </li>
           ))}
         </ol>

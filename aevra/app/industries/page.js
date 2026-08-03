@@ -1,5 +1,6 @@
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
 import IndustryCard from "@/components/sections/IndustryCard";
 import CTABanner from "@/components/sections/CTABanner";
 import { industries } from "@/lib/data";
@@ -25,8 +26,10 @@ export default function IndustriesPage() {
             All Industries
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((i) => (
-              <IndustryCard key={i.slug} industry={i} />
+            {industries.map((i, idx) => (
+              <Reveal key={i.slug} delay={(idx % 3) * 100}>
+                <IndustryCard industry={i} />
+              </Reveal>
             ))}
           </div>
         </Container>

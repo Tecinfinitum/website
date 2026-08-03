@@ -1,6 +1,6 @@
 export default function CaseStudyCard({ study }) {
   return (
-    <article className="group relative overflow-hidden glass rounded-2xl p-8 hover:-translate-y-1 transition duration-300">
+    <article className="group relative overflow-hidden glass rounded-2xl p-8 h-full hover:-translate-y-1 transition duration-300">
       <div className="flex items-center justify-between text-sm">
         <span className="font-semibold text-white">{study.client}</span>
         <span className="text-white/40">{study.sector}</span>

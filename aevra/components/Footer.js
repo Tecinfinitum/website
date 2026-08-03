@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "./ui/Container";
+import Logo from "./Logo";
 import { company } from "@/lib/data";
 
 const footerNav = {
@@ -37,12 +38,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2" aria-label={`${company.name} home`}>
-              <span
-                className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-brand text-white font-bold text-sm"
-                aria-hidden="true"
-              >
-                A
-              </span>
+              <Logo idPrefix="footer-logo" size={28} />
               <span className="font-semibold text-white">{company.name}</span>
             </Link>
             <p className="mt-4 text-sm text-white/50 max-w-xs">{company.tagline}</p>

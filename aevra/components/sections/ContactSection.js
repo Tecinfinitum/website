@@ -1,6 +1,14 @@
 import Container from "../ui/Container";
+import Reveal from "../ui/Reveal";
 import ConsultationForm from "./ConsultationForm";
 import { company } from "@/lib/data";
+
+const nextSteps = [
+  { step: "01", title: "We review", desc: "Your request lands with a senior consultant, not a queue." },
+  { step: "02", title: "Intro call", desc: "A 30-minute conversation to understand your goals and constraints." },
+  { step: "03", title: "Tailored plan", desc: "A scoped proposal with timeline, team, and approach — no boilerplate." },
+  { step: "04", title: "Kickoff", desc: "Work starts with the same people who scoped it, not a handoff." },
+];
 
 export default function ContactSection({
   eyebrow = "Let's talk",
@@ -28,6 +36,18 @@ export default function ContactSection({
 
           <ConsultationForm />
         </div>
+
+        <Reveal delay={100}>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {nextSteps.map((s) => (
+              <div key={s.step} className="text-center sm:text-left">
+                <span className="text-xs font-mono text-white/35">{s.step}</span>
+                <h3 className="mt-2 text-sm font-semibold text-white">{s.title}</h3>
+                <p className="mt-1 text-xs text-white/50 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -1,23 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import Logo from "./Logo";
 import { nav, company } from "@/lib/data";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mt-4 glass rounded-2xl px-5 py-3 flex items-center justify-between">
+        <div
+          className={`mt-4 rounded-2xl px-5 py-3 flex items-center justify-between transition-all duration-300 ${
+            scrolled ? "glass shadow-[0_10px_40px_-20px_rgba(0,0,0,0.6)]" : "bg-transparent border border-transparent"
+          }`}
+        >
           <Link href="/" className="flex items-center gap-2" aria-label={`${company.name} home`}>
-            <span
-              className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-brand text-white font-bold"
-              aria-hidden="true"
-            >
-              A
-            </span>
+            <Logo idPrefix="nav-logo" size={32} />
             <span className="text-lg font-semibold tracking-tight text-white">{company.name}</span>
           </Link>
 

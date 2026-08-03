@@ -1,5 +1,6 @@
 import PageHero from "@/components/ui/PageHero";
 import Container from "@/components/ui/Container";
+import Reveal from "@/components/ui/Reveal";
 import CaseStudyCard from "@/components/sections/CaseStudyCard";
 import Testimonials from "@/components/sections/Testimonials";
 import CTABanner from "@/components/sections/CTABanner";
@@ -26,8 +27,10 @@ export default function CaseStudiesPage() {
             All Case Studies
           </h2>
           <div className="grid gap-6 lg:grid-cols-3">
-            {caseStudies.map((c) => (
-              <CaseStudyCard key={c.slug} study={c} />
+            {caseStudies.map((c, i) => (
+              <Reveal key={c.slug} delay={(i % 3) * 100}>
+                <CaseStudyCard study={c} />
+              </Reveal>
             ))}
           </div>
         </Container>
