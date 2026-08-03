@@ -18,14 +18,16 @@ export default function Logo({ idPrefix = "logo", size = 32, className = "" }) {
       </defs>
       <rect width="32" height="32" rx="9" fill={`url(#${gradientId})`} />
       <path
-        d="M9.5 22.5 16 9.5l6.5 13"
+        d="M10 22 16 10 22 15 10 22"
         stroke="white"
-        strokeWidth="2"
+        strokeOpacity="0.9"
+        strokeWidth="1.4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path d="M12.2 17.5h7.6" stroke="white" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="16" cy="9.5" r="1.7" fill="white" />
+      <circle cx="10" cy="22" r="2" fill="white" />
+      <circle cx="16" cy="10" r="2" fill="white" />
+      <circle cx="22" cy="15" r="2" fill="white" />
     </svg>
   );
 }

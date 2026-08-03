@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://aevra.ai/sitemap.xml",
+    sitemap: "https://siya.ai/sitemap.xml",
   };
 }

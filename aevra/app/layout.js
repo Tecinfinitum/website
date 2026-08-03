@@ -7,13 +7,13 @@ import { company } from "@/lib/data";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata = {
-  metadataBase: new URL("https://aevra.ai"),
+  metadataBase: new URL("https://siya.ai"),
   title: {
     default: `${company.name} — ${company.tagline}`,
     template: `%s — ${company.name}`,
   },
   description:
-    "Aevra is an enterprise software consulting and AI solutions partner. We design, build, and deploy custom software, system integrations, and production AI that drive measurable business results.",
+    "Siya is an enterprise software consulting and AI solutions partner. We design, build, and deploy custom software, system integrations, and production AI that drive measurable business results.",
   keywords: [
     "software consulting",
     "custom software development",

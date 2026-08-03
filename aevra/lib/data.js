@@ -1,7 +1,7 @@
 export const company = {
-  name: "Aevra",
+  name: "Siya",
   tagline: "Software, Strategy, and AI—Built for Business",
-  email: "hello@aevra.ai",
+  email: "hello@siya.ai",
   phone: "+1 (415) 555-0142",
   address: "100 Market Street, Suite 400, San Francisco, CA 94105",
 };
@@ -240,7 +240,7 @@ export const caseStudies = [
 
 export const testimonials = [
   {
-    quote: "Aevra felt less like a vendor and more like our smartest engineering team. They shipped an AI feature we'd been stuck on for a year — in six weeks.",
+    quote: "Siya felt less like a vendor and more like our smartest engineering team. They shipped an AI feature we'd been stuck on for a year — in six weeks.",
     name: "Priya Nair",
     role: "VP Product, FinType",
   },
@@ -255,7 +255,7 @@ export const testimonials = [
     role: "CFO, Northwind Capital",
   },
   {
-    quote: "Security and compliance were never an afterthought with Aevra. They understood our regulatory constraints from day one, which saved us months.",
+    quote: "Security and compliance were never an afterthought with Siya. They understood our regulatory constraints from day one, which saved us months.",
     name: "Dr. Sarah Lin",
     role: "VP Engineering, Meridian Health",
   },
@@ -288,7 +288,7 @@ export const faqs = [
   },
   {
     q: "Where is your team located?",
-    a: "Aevra is remote-first with senior engineers and strategists across North America and Europe, giving clients extended working-hours coverage.",
+    a: "Siya is remote-first with senior engineers and strategists across North America and Europe, giving clients extended working-hours coverage.",
   },
 ];
 

@@ -1,8 +1,8 @@
-# Aevra — Software, Strategy, and AI—Built for Business
+# Siya — Software, Strategy, and AI—Built for Business
 
 A production-ready enterprise marketing site built with **Next.js 14 (App Router)** + **Tailwind CSS**.
 
-Live: https://aevra-alpha.vercel.app
+Live: https://aevra-alpha.vercel.app (Vercel project/URL slug predates the Siya rename — see Custom domain below to point a `siya.*` domain at it)
 
 ## Pages
 
@@ -40,9 +40,9 @@ Or connect the repo in the Vercel dashboard for deploys on every push (see **Opt
 ```bash
 git init
 git add .
-git commit -m "Aevra site"
+git commit -m "Siya site"
 git branch -M main
-git remote add origin https://github.com/<you>/aevra.git
+git remote add origin https://github.com/<you>/siya.git
 git push -u origin main
 ```
 
@@ -50,7 +50,7 @@ Then import the repo at https://vercel.com/new — Vercel auto-detects Next.js.
 
 ### Custom domain
 
-In the Vercel project → **Settings → Domains**, add `aevra.ai` (or your domain) and follow the DNS instructions.
+In the Vercel project → **Settings → Domains**, add `siya.ai` (or your domain) and follow the DNS instructions.
 
 ## Wire up the contact form
 
@@ -64,7 +64,7 @@ The form posts to `app/api/contact/route.js`, which currently just logs submissi
 
 - **Brand name / copy / content**: everything (nav, services, industries, case studies, testimonials, FAQ, tech stack, trust pillars) lives in `lib/data.js` — edit there first.
 - **Colors**: `tailwind.config.js` → `theme.extend.colors` (`navy`, `brand`, `electric`).
-- **Logo**: replace the `A` badge in `Nav.js` and `Footer.js` with an `<img>` or SVG.
+- **Logo**: the abstract node mark lives in `components/Logo.js` (and mirrored in `app/icon.svg` for the favicon) — swap for an `<img>` or different SVG as needed.
 - **SEO / metadata**: `app/layout.js` for site-wide defaults, each `app/**/page.js` exports its own `metadata`.
 - **Sitemap / robots**: `app/sitemap.js`, `app/robots.js`.
 

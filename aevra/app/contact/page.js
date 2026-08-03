@@ -6,7 +6,7 @@ import { company } from "@/lib/data";
 export const metadata = {
   title: "Contact",
   description:
-    "Book a free consultation with Aevra to discuss software consulting, custom development, or AI implementation for your business.",
+    "Book a free consultation with Siya to discuss software consulting, custom development, or AI implementation for your business.",
 };
 
 export default function ContactPage() {
