@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { getAssistantReply, suggestedPrompts } from "@/lib/assistant";
 import { company } from "@/lib/data";
 
-const GREETING = `Hi, I'm Nova — a guide to ${company.name}. Ask me about our services, industries, pricing, or how to get started.`;
+const GREETING = `Hi, I'm Siya — a guide to ${company.name}. Ask me about our services, industries, pricing, or how to get started.`;
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -55,17 +55,17 @@ export default function ChatWidget() {
       {open && (
         <div
           role="dialog"
-          aria-label="Chat with Nova"
+          aria-label="Chat with Siya"
           className="mb-4 w-[22rem] max-w-[calc(100vw-2.5rem)] glass rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] flex flex-col"
           style={{ height: "28rem" }}
         >
           <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-white/5">
             <div className="flex items-center gap-2.5">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-electric to-brand text-white text-sm font-bold" aria-hidden="true">
-                N
+                S
               </span>
               <div>
-                <p className="text-sm font-semibold text-white leading-tight">Nova</p>
+                <p className="text-sm font-semibold text-white leading-tight">Siya</p>
                 <p className="text-xs text-white/45 leading-tight">Guide to {company.name}</p>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function ChatWidget() {
 
       <button
         onClick={() => setOpen((o) => !o)}
-        aria-label={open ? "Close chat" : "Open chat with Nova"}
+        aria-label={open ? "Close chat" : "Open chat with Siya"}
         aria-expanded={open}
         className="ml-auto flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-electric to-brand text-white glow-ring hover:opacity-95 transition"
       >
