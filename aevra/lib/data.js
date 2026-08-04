@@ -1,7 +1,7 @@
 export const company = {
   name: "TecInfinitum",
   tagline: "Software, Strategy, and AI—Built for Business",
-  email: "hello@tecinfinitum.com",
+  email: "support@tecinfinitum.com",
   phone: "+1 (415) 555-0142",
   address: "100 Market Street, Suite 400, San Francisco, CA 94105",
 };

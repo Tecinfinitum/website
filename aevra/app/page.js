@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import WelcomeNote from "@/components/sections/WelcomeNote";
 import TrustedBy from "@/components/sections/TrustedBy";
 import ServicesOverview from "@/components/sections/ServicesOverview";
 import IndustriesPreview from "@/components/sections/IndustriesPreview";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WelcomeNote />
       <TrustedBy />
       <ServicesOverview />
       <IndustriesPreview />

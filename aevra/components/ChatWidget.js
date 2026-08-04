@@ -31,6 +31,12 @@ export default function ChatWidget() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    const onOpenRequest = () => setOpen(true);
+    window.addEventListener("tecinfinitum:open-chat", onOpenRequest);
+    return () => window.removeEventListener("tecinfinitum:open-chat", onOpenRequest);
+  }, []);
+
   const send = (text) => {
     const trimmed = text.trim();
     if (!trimmed) return;
