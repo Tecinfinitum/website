@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { getAssistantReply, suggestedPrompts } from "@/lib/assistant";
 import { company } from "@/lib/data";
 
-const GREETING = `Hi, I'm Siya — a guide to ${company.name}. Ask me about our services, industries, pricing, or how to get started.`;
+const GREETING = `Hi, I'm Siya.ai — a guide to ${company.name}. Ask me about our services, industries, pricing, or how to get started.`;
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -61,7 +61,7 @@ export default function ChatWidget() {
       {open && (
         <div
           role="dialog"
-          aria-label="Chat with Siya"
+          aria-label="Chat with Siya.ai"
           className="mb-4 w-[22rem] max-w-[calc(100vw-2.5rem)] glass rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] flex flex-col"
           style={{ height: "28rem" }}
         >
@@ -71,7 +71,7 @@ export default function ChatWidget() {
                 S
               </span>
               <div>
-                <p className="text-sm font-semibold text-white leading-tight">Siya</p>
+                <p className="text-sm font-semibold text-white leading-tight">Siya.ai</p>
                 <p className="text-xs text-white/45 leading-tight">Guide to {company.name}</p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function ChatWidget() {
 
       <button
         onClick={() => setOpen((o) => !o)}
-        aria-label={open ? "Close chat" : "Open chat with Siya"}
+        aria-label={open ? "Close chat" : "Open chat with Siya.ai"}
         aria-expanded={open}
         className="ml-auto flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-electric to-brand text-white glow-ring hover:opacity-95 transition"
       >

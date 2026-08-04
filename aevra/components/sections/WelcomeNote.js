@@ -19,9 +19,8 @@ export default function WelcomeNote() {
               <SiyaAvatar size={180} />
             </div>
             <div>
-              <span className="text-sm font-medium text-electric-light">A note from Siya</span>
-              <h2 id="welcome-note-heading" className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-white">
-                Hi, I&apos;m Siya — your guide to {company.name}
+              <h2 id="welcome-note-heading" className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
+                Hi, I&apos;m Siya.ai — your guide to {company.name}
               </h2>
               <p className="mt-4 text-white/60 max-w-xl">
                 Not sure where to start? Ask me about our services, industries, pricing, or
@@ -34,7 +33,7 @@ export default function WelcomeNote() {
                   onClick={openChat}
                   className="inline-flex items-center justify-center rounded-full px-6 py-3 font-medium text-sm sm:text-base bg-gradient-to-r from-electric to-brand text-white glow-ring hover:opacity-95 transition"
                 >
-                  Chat with Siya
+                  Chat with Siya.ai
                 </button>
                 <a
                   href="/contact"

@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import SectionHeading from "../ui/SectionHeading";
 import Reveal from "../ui/Reveal";
 import IndustryIcon from "./IndustryIcon";
+import Image from "next/image";
 import { industries } from "@/lib/data";
 
 export default function IndustriesPreview() {
@@ -22,7 +23,22 @@ export default function IndustriesPreview() {
           </Link>
         </div>
 
-        <ul className="mt-12 flex flex-wrap gap-3">
+        <div className="relative mt-12 overflow-hidden rounded-3xl border border-white/10 bg-navy-950">
+          <Image
+            src="/images/enterprise/industries-strip.png"
+            alt="Enterprise teams working across finance, healthcare, and advanced manufacturing"
+            width={1921}
+            height={819}
+            sizes="(min-width: 1280px) 1200px, 94vw"
+            className="h-auto w-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
+          <div className="absolute bottom-5 left-5 right-5 hidden items-center justify-between text-xs text-white/60 sm:flex">
+            <span>Financial operations</span><span>Secure healthcare technology</span><span>Intelligent manufacturing</span>
+          </div>
+        </div>
+
+        <ul className="mt-6 flex flex-wrap gap-3">
           {industries.map((i, idx) => (
             <li key={i.slug}>
               <Reveal delay={(idx % 4) * 60}>

@@ -36,7 +36,7 @@ export function getAssistantReply(input) {
   }
 
   if (hasExactWord(tokens, ["hi", "hey", "hello", "hiya", "howdy", "yo", "sup"]) && tokens.length <= 4) {
-    return `Hey! I'm Siya, ${company.name}'s guide. Ask me about our services, industries we work in, pricing, or how to book a consultation.`;
+    return `Hey! I'm Siya.ai, ${company.name}'s guide. Ask me about our services, industries we work in, pricing, or how to book a consultation.`;
   }
 
   if (includesAny(msg, ["price", "pricing", "cost", "budget", "how much", "expensive"])) {
