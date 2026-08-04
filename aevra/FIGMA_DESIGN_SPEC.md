@@ -1,4 +1,4 @@
-# Siya — Figma Design Spec
+# TecInfinitum — Figma Design Spec
 
 Everything you need to recreate the coded site as a Figma file. Set up a desktop frame at **1440 px** wide and a mobile frame at **390 px**.
 
@@ -35,7 +35,7 @@ Everything you need to recreate the coded site as a Figma file. Set up a desktop
 
 ## Layout & sections (top to bottom)
 
-1. **Nav (sticky)** — glass pill, max-width 1200, 16px top margin. Logo (gradient `A` square + "Siya") left; links Services / Work / Clients / Contact center; white "Book a call" pill right. Mobile: hamburger.
+1. **Nav (sticky)** — glass pill, max-width 1200, 16px top margin. Logo (gradient `A` square + "TecInfinitum") left; links Services / Work / Clients / Contact center; white "Book a call" pill right. Mobile: hamburger.
 2. **Hero** — centered, ~160px top padding. Faint 56px grid background with radial mask, two ambient glow blobs. Pill eyebrow → H1 with gradient on "intelligent software" → muted subhead → two CTAs (gradient "Start a project", glass "See our work") → 3 stats row (40+, 12, 4.9/5).
 3. **Services** — left-aligned header + 2×2 grid of glass cards. Each card: title + mono number (01–04), description, pill tags. Hover: border turns brand.
 4. **Case studies (Work)** — header row + 3 columns. Each: client + sector, bold outcome statement, big gradient metric. Hover: lift + accent gradient wash.

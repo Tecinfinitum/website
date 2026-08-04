@@ -1,10 +1,16 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { company } from "@/lib/data";
 
+export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const logoBuf = await readFile(path.join(process.cwd(), "public/logo-icon.png"));
+  const logoSrc = `data:image/png;base64,${logoBuf.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -26,15 +32,8 @@ export default async function Image() {
             gap: "16px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              width: "56px",
-              height: "56px",
-              borderRadius: "16px",
-              background: "linear-gradient(135deg, #2f6fed 0%, #9b82ff 100%)",
-            }}
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoSrc} width="64" height="56" alt="" />
           <div style={{ display: "flex", fontSize: "36px", fontWeight: 700, color: "#ffffff" }}>
             {company.name}
           </div>

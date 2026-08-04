@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2" aria-label={`${company.name} home`}>
-              <Logo idPrefix="footer-logo" size={28} />
+              <Logo size={28} />
               <span className="font-semibold text-white">{company.name}</span>
             </Link>
             <p className="mt-4 text-sm text-white/50 max-w-xs">{company.tagline}</p>

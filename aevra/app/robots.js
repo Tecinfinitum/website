@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://siya.ai/sitemap.xml",
+    sitemap: "https://tecinfinitum.com/sitemap.xml",
   };
 }

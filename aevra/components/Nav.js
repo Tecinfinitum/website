@@ -25,7 +25,7 @@ export default function Nav() {
           }`}
         >
           <Link href="/" className="flex items-center gap-2" aria-label={`${company.name} home`}>
-            <Logo idPrefix="nav-logo" size={32} />
+            <Logo size={32} />
             <span className="text-lg font-semibold tracking-tight text-white">{company.name}</span>
           </Link>
 

@@ -10,7 +10,7 @@ import { company } from "@/lib/data";
 export const metadata = {
   title: "About",
   description:
-    "Siya is an enterprise software consulting and AI solutions partner focused on measurable business outcomes — operational efficiency, lower costs, and scalable systems.",
+    "TecInfinitum is an enterprise software consulting and AI solutions partner focused on measurable business outcomes — operational efficiency, lower costs, and scalable systems.",
 };
 
 const values = [

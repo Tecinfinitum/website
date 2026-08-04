@@ -11,7 +11,7 @@ const routes = [
 ];
 
 export default function sitemap() {
-  const base = "https://siya.ai";
+  const base = "https://tecinfinitum.com";
   const now = new Date();
 
   return routes.map((route) => ({

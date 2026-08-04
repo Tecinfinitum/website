@@ -1,8 +1,8 @@
-# Siya — Software, Strategy, and AI—Built for Business
+# TecInfinitum — Software, Strategy, and AI—Built for Business
 
 A production-ready enterprise marketing site built with **Next.js 14 (App Router)** + **Tailwind CSS**.
 
-Live: https://aevra-alpha.vercel.app (Vercel project/URL slug predates the Siya rename — see Custom domain below to point a `siya.*` domain at it)
+Live: https://aevra-alpha.vercel.app (Vercel project/URL slug predates the TecInfinitum rename — see Custom domain below to point `tecinfinitum.com` at it)
 
 ## Pages
 
@@ -40,9 +40,9 @@ Or connect the repo in the Vercel dashboard for deploys on every push (see **Opt
 ```bash
 git init
 git add .
-git commit -m "Siya site"
+git commit -m "TecInfinitum site"
 git branch -M main
-git remote add origin https://github.com/<you>/siya.git
+git remote add origin https://github.com/<you>/tecinfinitum.git
 git push -u origin main
 ```
 
@@ -50,7 +50,7 @@ Then import the repo at https://vercel.com/new — Vercel auto-detects Next.js.
 
 ### Custom domain
 
-In the Vercel project → **Settings → Domains**, add `siya.ai` (or your domain) and follow the DNS instructions.
+In the Vercel project → **Settings → Domains**, add `tecinfinitum.com` (or your domain) and follow the DNS instructions.
 
 ## Wire up the contact form
 

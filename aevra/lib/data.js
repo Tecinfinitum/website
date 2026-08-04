@@ -1,7 +1,7 @@
 export const company = {
-  name: "Siya",
+  name: "TecInfinitum",
   tagline: "Software, Strategy, and AI—Built for Business",
-  email: "hello@siya.ai",
+  email: "hello@tecinfinitum.com",
   phone: "+1 (415) 555-0142",
   address: "100 Market Street, Suite 400, San Francisco, CA 94105",
 };
@@ -279,7 +279,7 @@ export const caseStudies = [
 
 export const testimonials = [
   {
-    quote: "Siya felt less like a vendor and more like our smartest engineering team. They shipped an AI feature we'd been stuck on for a year — in six weeks.",
+    quote: "TecInfinitum felt less like a vendor and more like our smartest engineering team. They shipped an AI feature we'd been stuck on for a year — in six weeks.",
     name: "Priya Nair",
     role: "VP Product, FinType",
   },
@@ -294,7 +294,7 @@ export const testimonials = [
     role: "CFO, Northwind Capital",
   },
   {
-    quote: "Security and compliance were never an afterthought with Siya. They understood our regulatory constraints from day one, which saved us months.",
+    quote: "Security and compliance were never an afterthought with TecInfinitum. They understood our regulatory constraints from day one, which saved us months.",
     name: "Dr. Sarah Lin",
     role: "VP Engineering, Meridian Health",
   },
@@ -327,7 +327,7 @@ export const faqs = [
   },
   {
     q: "Where is your team located?",
-    a: "Siya is remote-first with senior engineers and strategists across North America and Europe, giving clients extended working-hours coverage.",
+    a: "TecInfinitum is remote-first with senior engineers and strategists across North America and Europe, giving clients extended working-hours coverage.",
   },
 ];
 

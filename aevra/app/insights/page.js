@@ -7,7 +7,7 @@ import { insights } from "@/lib/data";
 export const metadata = {
   title: "Insights",
   description:
-    "Practical perspectives on AI strategy, software modernization, and enterprise technology from the Siya team.",
+    "Practical perspectives on AI strategy, software modernization, and enterprise technology from the TecInfinitum team.",
 };
 
 export default function InsightsPage() {
